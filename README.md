@@ -6,13 +6,12 @@ It's a kind of POC to check if the little Pi Zero 2 from the fundation has enoug
 
 ## Tools
 
-For this funny project we want to use:
-* python3
-* Postgresql
-* Grafana
+For this funny project we want to use the current (2021 October) tools avaiable:
+* python3 - v3.7.3
+* Postgresql - v11
+* Grafana - v8.2.4
 
-The OS for the Pi is the following, this is before the new version from November 2021.
-It is still a 32 bit version.
+The current OS version for the Pi is the following, this is before the new version from November 2021 (sadly still a 32 bit version):
 
 ```
 pi@raspberrypi:~/temperature $ uname -a
