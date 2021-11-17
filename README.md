@@ -1,6 +1,8 @@
 # raspi_zero2_monitoring
 
-A project to show how to manage computer monitoring with the little Raspberry Pi Zero 2.
+A project to show how to manage "computer monitoring" with the little Raspberry Pi Zero 2. We want to use Postgres (PG) and Grafana to show some information like CPU Temperature and others things in a beautiful Grafana Dashboard.
+
+It's a kind of POC to check if the little Pi Zero 2 from the fundation has enough power to do the task.
 
 ## Tools
 
