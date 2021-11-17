@@ -21,7 +21,7 @@ from pyembedded.raspberry_pi_tools.raspberrypi import PI
 # script is running where PG is installed
 someUri = "postgres://postgres:postgres@127.0.0.1:5432"
 
-# using DB class
+# DB class
 mybase = PG(someUri)
 print(str(mybase.clsVersion()))
 
@@ -38,12 +38,21 @@ if __name__ == '__main__':
         print("RJ45: " + pi.get_connected_ip_addr(network='eth0'))
         cpuT = pi.get_cpu_temp()
 
+        # CPU Speed calculation
+        f = open("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq")
+        cpuSpeed = int(int(f.read()) / 1000)
+        f.close()
+
         # -- insert temperature
         req = "insert into public.rpiz2_temperature (f_measure, t_time) values (" + str(cpuT) + ", current_timestamp)"
         mybase.clsExecute(req)
         
         # -- insert cpu_usage
         req = "insert into public.rpiz2_cpu_usage (f_cpu_usage, t_time) values (" + str(cpuU) + ", current_timestamp)"
+        mybase.clsExecute(req)
+        
+        # -- insert cpu_Speed
+        req = "insert into public.rpiz2_cpu_speed (f_cpu_speed, t_time) values (" + str(cpuSpeed) + ", current_timestamp)"
         mybase.clsExecute(req)
         
         
