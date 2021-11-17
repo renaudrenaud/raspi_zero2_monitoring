@@ -59,7 +59,7 @@ From my point of view the most difficult task is to find where to get the packag
 
 This is here https://grafana.com/grafana/download?platform=arm
 
-Please do not select the arm64 version. It should be something like that (depending on the last Grafana version, replace 8.2.4 by the correct version number):
+Please do not select the arm64 version if your system is not arm64! It should be something like that (depending on the last Grafana version, replace 8.2.4 by the correct version number):
 
 ```
 sudo apt-get install -y adduser libfontconfig1
