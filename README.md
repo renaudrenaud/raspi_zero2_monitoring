@@ -9,6 +9,15 @@ For this funny project we want to use:
 * Postgresql
 * Grafana
 
+The OS for the Pi is the following, this is before the new version from November 2021.
+It is still a 32 bit version.
+
+```
+pi@raspberrypi:~/temperature $ uname -a
+Linux raspberrypi 5.10.63-v7+ #1459 SMP Wed Oct 6 16:41:10 BST 2021 armv7l GNU/Linux
+```
+
+
 
 ## Postgres Install & Config
 
@@ -44,4 +53,18 @@ Add the line:
 
 
 
+## Grafana
 
+From my point of view the most difficult task is to find where to get the package.
+
+This is here https://grafana.com/grafana/download?platform=arm
+
+Please do not select the arm64 version. It should be something like that (depending on the last Grafana version, replace 8.2.4 by the correct version number):
+
+```
+sudo apt-get install -y adduser libfontconfig1
+wget https://dl.grafana.com/enterprise/release/grafana-enterprise_8.2.4_armhf.deb
+sudo dpkg -i grafana-enterprise_8.2.4_armhf.deb
+```
+
+And you're done. Grafana is visible on port 3000.
