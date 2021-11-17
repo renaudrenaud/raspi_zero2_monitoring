@@ -16,13 +16,10 @@ Installation is done with the following command:
 
 ```sudo apt install postgresql```
 
-When done, it's possible to start PG using:
+When done, it's possible to start /stop PG using:
 
-```sudo pg_ctlcluster 11 main start```
-
-And stop with:
-
-```sudo pg_ctlcluster 11 main stop```
+```sudo pg_ctlcluster 11 main start
+sudo pg_ctlcluster 11 main stop```
 
 To be able to access the database accross the lan at home, you have to modify 2 files:
 
