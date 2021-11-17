@@ -4,6 +4,10 @@ A project to show how to manage "computer monitoring" with the little Raspberry 
 
 It's a kind of POC to check if the little Pi Zero 2 from the fundation has enough power to do the task.
 
+And frankly speaking, it works and really well:
+
+![plot](./documentation/RaspiGrafana.png)
+
 ## Tools
 
 For this funny project we want to use the current (2021 October) "Open Source" tools avaiable:
