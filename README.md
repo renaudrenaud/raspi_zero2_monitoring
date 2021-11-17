@@ -6,10 +6,10 @@ It's a kind of POC to check if the little Pi Zero 2 from the fundation has enoug
 
 ## Tools
 
-For this funny project we want to use the current (2021 October) tools avaiable:
-* python3 - v3.7.3
-* Postgresql - v11
-* Grafana - v8.2.4
+For this funny project we want to use the current (2021 October) "Open Source" tools avaiable:
+* python3 - v3.7.3 - https://www.python.org/
+* Postgresql - v11 - https://www.postgresql.org/
+* Grafana - v8.2.4 - https://grafana.com/
 
 The current OS version for the Pi is the following, this is before the new version from November 2021 (sadly still a 32 bit version):
 
